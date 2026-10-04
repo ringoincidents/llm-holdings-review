@@ -45,3 +45,30 @@ Append-only public record of material external feedback.
   - added requested Lab/authority and operability source/tests;
   - added EVIDENCE_LIMITS.md;
   - strengthened AI intake prompt-injection rules.
+
+
+### EXT-2026-002 — r2 architectural review: SIMPLIFY
+
+- source: public Issue #3 / external AI review relayed by Founder
+- target_snapshot: 2026-10-04-r2
+- status: ADAPT
+- reviewed_at: 2026-10-04
+- claim:
+  - retain the strong fail-closed invariants and memory-scope tests;
+  - simplify only abstractions that lack distinct enforceable semantics or measured value;
+  - production E2E evidence and review-snapshot consistency require stronger verification;
+  - multi-agent execution needs a direct single-agent baseline;
+  - security-sensitive identity/trust/scope concerns require private verification.
+- evidence:
+  - selected r2 runtime, router and test files reviewed by the external reviewer;
+  - private maintainer verification against current Runtime source;
+  - security details intentionally excluded from this public log.
+- reasoning:
+  - the overall SIMPLIFY verdict is useful, but immediate deletion of A0–A4 or organizational objects is not justified by one partial snapshot;
+  - verified security boundaries should be remediated immediately;
+  - structural simplification should follow measured semantics/ROI rather than reviewer preference alone.
+- upstream_action: private remediation work created; evidence-gathering issues created
+- public_outcome:
+  - public architectural review preserved as Issue #3;
+  - private security findings were independently verified and remediated through governed private work;
+  - follow-up evaluation tracks authority-level semantics, direct-single-agent baseline, snapshot drift, provenance taint/revalidation, and explicit E2E verification.
