@@ -46,7 +46,6 @@ Append-only public record of material external feedback.
   - added EVIDENCE_LIMITS.md;
   - strengthened AI intake prompt-injection rules.
 
-
 ### EXT-2026-002 — r2 architectural review: SIMPLIFY
 
 - source: public Issue #3 / external AI review relayed by Founder
@@ -72,3 +71,32 @@ Append-only public record of material external feedback.
   - public architectural review preserved as Issue #3;
   - private security findings were independently verified and remediated through governed private work;
   - follow-up evaluation tracks authority-level semantics, direct-single-agent baseline, snapshot drift, provenance taint/revalidation, and explicit E2E verification.
+
+### EXT-2026-002-S1 — r2 evidence supplement: scope and operability
+
+- source: expanded external AI review relayed by Founder
+- target_snapshot: 2026-10-04-r2
+- status: ADAPT
+- reviewed_at: 2026-10-04
+- claim:
+  - cross-Lab object/history leakage in the r2 code was confirmed;
+  - `list_lab_history` scaled by loading/parsing the Event table;
+  - `runtime_ops` overstated health with constant `runtime.ok=True`;
+  - telemetry/background recovery evidence was missing from the public packet;
+  - several architecture claims remained UNVERIFIED because required files were absent.
+- evidence:
+  - expanded reviewer read of r2 `runtime/labs.py` and `runtime_ops.py`;
+  - private maintainer verification against current Runtime;
+  - current background-execution and telemetry implementation;
+  - CI-backed operability follow-up.
+- reasoning:
+  - the cross-Lab leak was already repaired after EXT-2026-002;
+  - the history-scan and misleading Runtime Ops semantics were valid additional findings and were fixed upstream;
+  - retry, durable Job, lease, heartbeat and run telemetry already existed but were not exposed clearly enough to the reviewer;
+  - missing evidence should be solved by a broader new snapshot, not by rewriting r2.
+- upstream_action: private operability patch + expanded review snapshot
+- public_outcome:
+  - Runtime Ops now distinguishes process reachability from measured execution health;
+  - Runtime Ops projects queue/running/expired-lease/failure and operational metrics when DB evidence is available;
+  - Lab history is DB-prefiltered and bounded instead of materializing the whole Event table;
+  - r4 exposes previously missing authority/schema/scope/operability/Record Writer/D1/UI evidence.

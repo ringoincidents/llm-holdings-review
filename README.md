@@ -16,19 +16,20 @@ It is intentionally **not** the production source of truth. The production/runti
 
 ## Current round
 
-**2026-10-04-r3 — remediation verification**
+**2026-10-04-r4 — expanded implementation evidence**
 
 Canonical private upstream baseline:
 
-`82c7d21ea21458562401069427db737e697d1307`
+`3a23a806301669a727eee0b9613ede9c95415f4d`
 
-r2 remains immutable evidence of the code that produced the second external review and `SIMPLIFY` verdict. r3 is a new post-remediation target created so the same findings can be tested again against changed code.
+r2 remains the historical target that produced the `SIMPLIFY` verdict. r3 captured the first remediation verification. r4 broadens the evidence surface to include authority, API schemas, Lab scope modules, background execution, telemetry, Runtime Ops, Record Writer, knowledge/action reconciliation, D1/Clef, and representative mobile UI.
 
 ## Review history in one line
 
 ```text
 r1 → review-process gaps → EXT-2026-001 → r2
-r2 → SIMPLIFY + private boundary findings → EXT-2026-002 → private remediation → r3
+r2 → SIMPLIFY + boundary findings → EXT-2026-002 → remediation → r3
+r2 supplement → operability/scope evidence → Runtime fixes → r4 expanded review
 ```
 
 ## Important boundary
