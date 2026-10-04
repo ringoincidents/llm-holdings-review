@@ -1,19 +1,24 @@
 # Direct Review Links — Current Round
 
-Current round: `2026-10-04-r2`
+Current round: `2026-10-04-r3`
 
-If GitHub folder/tree navigation does not work in your environment, start here:
+Start here when GitHub tree navigation is unavailable:
 
-- [Current packet README](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/README.md)
-- [Direct Blob Links](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/DIRECT_BLOB_LINKS.md)
-- [Evidence Limits](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/EVIDENCE_LIMITS.md)
+- [r3 README](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/README.md)
+- [Remediation Verification](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/REMEDIATION_VERIFICATION.md)
+- [Direct Blob Links](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/DIRECT_BLOB_LINKS.md)
+- [Evidence Limits](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/EVIDENCE_LIMITS.md)
+- [Review Prompt](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/REVIEW_PROMPT.md)
 
-Highest-priority direct code/test URLs:
+Highest-priority source/test URLs:
 
-- [memory_trust.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/source/runtime/memory_trust.py)
-- [runtime/labs.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/source/runtime/labs.py)
-- [backend/app/routers/labs.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/source/backend/app/routers/labs.py)
-- [test_production_e2e_smoke.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/tests/test_production_e2e_smoke.py)
-- [test_federated_coordination.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r2/tests/test_federated_coordination.py)
+- [test_security_boundaries.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/tests/test_security_boundaries.py)
+- [auth.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/backend/app/auth.py)
+- [labs router](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/backend/app/routers/labs.py)
+- [memory_trust.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/runtime/memory_trust.py)
+- [runtime/labs.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/runtime/labs.py)
+- [authority.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/runtime/authority.py)
+- [knowledge_reconciliation.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/runtime/knowledge_reconciliation.py)
+- [main.py](https://github.com/ringoincidents/llm-holdings-review/blob/main/snapshots/2026-10-04-r3/source/backend/app/main.py)
 
-This file is a moving convenience pointer. Historical review evidence remains in immutable `snapshots/` directories.
+This root file is a moving convenience pointer. Immutable historical evidence remains under `snapshots/`.
