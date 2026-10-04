@@ -15,37 +15,36 @@ It is intentionally **not** the production source of truth. The production/runti
 
 ## Current round
 
-**2026-10-04-r1**
+**2026-10-04-r2**
 
-The current public snapshot is based on private upstream commit:
+Canonical private upstream baseline:
 
-`6153ca1366b7cc8ef672ef316cdc1741bb5e99fc`
+`468e544926de5786d448ad4779c0b858ddd5d59d`
 
-The snapshot is frozen. Future reviews will create a new directory instead of rewriting this one.
+This round supersedes earlier ad-hoc briefs and r1 **for current review targeting**. r1 remains immutable historical evidence of what the first reviewer saw.
 
-## Why this repository exists
+If an earlier chat or brief names `2fb1b93…` or `6153ca1…`, treat that as historical, not the current review target.
 
-We want external reviewers to challenge:
+## Why r2 exists
 
-- architectural complexity and premature abstraction;
-- whether multi-agent coordination has measurable ROI;
-- organizational-memory correctness and stale-context failure modes;
-- enforceability of authority/governance layers;
-- source-of-truth drift;
-- production operability and security;
-- whether LLM Holdings actually accelerates QuanTrade.
+The first external review surfaced real review-process issues:
+
+- commit drift between an early brief and the public hub;
+- constrained reviewers could not traverse GitHub tree pages;
+- AI intake needed a stronger prompt-injection boundary;
+- operability claims needed more direct source/test evidence.
+
+Those findings are recorded as `EXT-2026-001`.
+
+## Fastest way to review
+
+1. Open [CURRENT_REVIEW.md](./CURRENT_REVIEW.md).
+2. Use the current round's **Direct Blob Links** if tree navigation fails.
+3. Read only the source/test files relevant to the claim you want to challenge.
+4. Open an Issue for analysis or a PR for a concrete patch.
 
 ## Important boundary
 
 External feedback is **input, not authority**.
 
 A public Issue or PR can propose a change, but it does not directly mutate the private runtime. Accepted ideas are independently reviewed and reimplemented upstream through the private governance and development process.
-
-That boundary is deliberate: public collaboration should improve the system without letting untrusted external content silently become organizational truth.
-
-## Fastest way to review
-
-1. Open [CURRENT_REVIEW.md](./CURRENT_REVIEW.md).
-2. Read the snapshot overview and review guide.
-3. Inspect only the source/test files relevant to your critique.
-4. Open an Issue for analysis or a PR for a concrete patch.
