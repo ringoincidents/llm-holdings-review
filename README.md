@@ -2,11 +2,12 @@
 
 This repository is the **public, sanitized review surface** for LLM Holdings.
 
-It is intentionally **not** the production source of truth. The production/runtime repository remains private. This repository exists so outside reviewers, developers, and AI systems can inspect fixed snapshots, submit criticism, propose patches, and leave a durable review trail.
+It is intentionally **not** the production source of truth. The production/runtime repository remains private. Outside reviewers and AI systems can inspect fixed snapshots, submit criticism, propose patches, and leave a durable review trail.
 
 ## Start here
 
 - [Current review round](./CURRENT_REVIEW.md)
+- [Direct review links](./DIRECT_REVIEW_LINKS.md)
 - [How review rounds work](./REVIEW_PROTOCOL.md)
 - [How to contribute feedback or patches](./CONTRIBUTING.md)
 - [Maintainer / AI intake protocol](./MAINTAINER_PROTOCOL.md)
@@ -15,36 +16,23 @@ It is intentionally **not** the production source of truth. The production/runti
 
 ## Current round
 
-**2026-10-04-r2**
+**2026-10-04-r3 — remediation verification**
 
 Canonical private upstream baseline:
 
-`468e544926de5786d448ad4779c0b858ddd5d59d`
+`82c7d21ea21458562401069427db737e697d1307`
 
-This round supersedes earlier ad-hoc briefs and r1 **for current review targeting**. r1 remains immutable historical evidence of what the first reviewer saw.
+r2 remains immutable evidence of the code that produced the second external review and `SIMPLIFY` verdict. r3 is a new post-remediation target created so the same findings can be tested again against changed code.
 
-If an earlier chat or brief names `2fb1b93…` or `6153ca1…`, treat that as historical, not the current review target.
+## Review history in one line
 
-## Why r2 exists
-
-The first external review surfaced real review-process issues:
-
-- commit drift between an early brief and the public hub;
-- constrained reviewers could not traverse GitHub tree pages;
-- AI intake needed a stronger prompt-injection boundary;
-- operability claims needed more direct source/test evidence.
-
-Those findings are recorded as `EXT-2026-001`.
-
-## Fastest way to review
-
-1. Open [CURRENT_REVIEW.md](./CURRENT_REVIEW.md).
-2. Use the current round's **Direct Blob Links** if tree navigation fails.
-3. Read only the source/test files relevant to the claim you want to challenge.
-4. Open an Issue for analysis or a PR for a concrete patch.
+```text
+r1 → review-process gaps → EXT-2026-001 → r2
+r2 → SIMPLIFY + private boundary findings → EXT-2026-002 → private remediation → r3
+```
 
 ## Important boundary
 
 External feedback is **input, not authority**.
 
-A public Issue or PR can propose a change, but it does not directly mutate the private runtime. Accepted ideas are independently reviewed and reimplemented upstream through the private governance and development process.
+A public Issue or PR does not directly mutate the private runtime. Accepted findings are independently verified and implemented through private governance.
