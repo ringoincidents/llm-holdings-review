@@ -2,33 +2,36 @@
 
 ## Round
 
-`2026-10-04-r1`
+`2026-10-04-r2`
 
-## Snapshot directory
+## Canonical private upstream baseline
 
-[Open the current snapshot](./snapshots/2026-10-04-r1/)
+`468e544926de5786d448ad4779c0b858ddd5d59d`
 
-## Private upstream baseline
+If an older brief or chat references another commit, this file wins for the current external-review target.
 
-`6153ca1366b7cc8ef672ef316cdc1741bb5e99fc`
+## Review packet
 
-This hash is an identity marker only. The private upstream repository is not required to review the public snapshot.
+- [README](./snapshots/2026-10-04-r2/README.md)
+- [System Overview](./snapshots/2026-10-04-r2/SYSTEM_OVERVIEW.md)
+- [Review Guide](./snapshots/2026-10-04-r2/REVIEW_GUIDE.md)
+- [Direct Blob Links](./snapshots/2026-10-04-r2/DIRECT_BLOB_LINKS.md)
+- [Evidence Limits](./snapshots/2026-10-04-r2/EVIDENCE_LIMITS.md)
+- [Manifest](./snapshots/2026-10-04-r2/MANIFEST.md)
+- [Copy/Paste Review Prompt](./snapshots/2026-10-04-r2/REVIEW_PROMPT.md)
 
-## Recommended reading order
+## Priority code review order
 
-1. [SYSTEM_OVERVIEW.md](./snapshots/2026-10-04-r1/SYSTEM_OVERVIEW.md)
-2. [REVIEW_GUIDE.md](./snapshots/2026-10-04-r1/REVIEW_GUIDE.md)
-3. [MANIFEST.md](./snapshots/2026-10-04-r1/MANIFEST.md)
-4. [REVIEW_PROMPT.md](./snapshots/2026-10-04-r1/REVIEW_PROMPT.md)
+1. `source/runtime/memory_trust.py`
+2. `source/runtime/labs.py`
+3. `source/backend/app/routers/labs.py`
+4. `tests/test_production_e2e_smoke.py`
+5. `tests/test_federated_coordination.py`
 
-Then inspect architecture, decision, source, test, or UI files inside the same snapshot.
-
-## Scope of this round
-
-This round includes the Runtime invariants, Lab/Mission architecture, federated authority, Living Organizational Knowledge, no-cold-start context delivery, Governed Record Writer, selected D1/runtime implementation, verification tests, and the QuanTrade Private Investment Office surface.
+Use the absolute URLs in **Direct Blob Links** when automated navigation cannot open folder pages.
 
 ## How to respond
 
 - Conceptual critique → open an Issue.
 - Concrete code/document change → open a PR against this public repository.
-- Security concern → follow [SECURITY.md](./SECURITY.md), not a public Issue.
+- Security concern → follow `SECURITY.md`, not a public Issue.
